@@ -1,4 +1,4 @@
-get_device_compatible("ido") == "OK" || abort("This package is for \"ido\" devices; this is a \"" + getprop("ro.product.device") + "\".");
+getprop("ro.product.device") == "ido" || getprop("ro.build.product") == "ido"  || abort("This package is for \"ido\" devices; this is a \"" + getprop("ro.product.device") + "\".");
 show_progress(0.900000, 150);
 package_extract_file("boot.img", "/dev/block/bootdevice/by-name/boot");
 
